@@ -52,33 +52,25 @@ LiPo ─ charger ─ power path ─ TPS63001 ─ 3V3 ─ ESP32-S3
 
 The camera is powered only when needed. Its raw sensor rails are generated on the main PCB (`2.8 V`, `1.5 V` and autofocus supply), while level translators protect the 3.3 V ESP32-S3 interface.
 
-## What I need for the first build
+## First build / prices
 
-I will use the JLC Top PCBA because I do not have experience soldering the
-small Top-side parts. The JLC minimum is two assembled boards. I will still get
-five bare PCBs, and the Bottom side will be soldered later.
+I am going with the JLC Top PCBA because I do not have experience soldering the
+small parts myself. Their minimum gives me five boards and two Top assemblies.
+I will do the Bottom side later.
 
 | Item | Price (USD) |
 |---|---:|
 | JLC Top PCBA: 5 PCBs + 2 Top assemblies, with the ESP32-S3 | 86.18 |
-| Bottom components for the two boards | 4.4264 |
+| Bottom components for the two boards | 4.43 |
 | Battery, camera, display, FPC cables and screws | 24.51 |
-| **Total, without shipping** | **115.1164** |
+| **Funding request, without shipping or taxes** | **115.12** |
 
-The two order views used for those prices are saved here: [display, US$6.22](hardware/procurement/evidence/aliexpress_display_2.2in_no_touch_usd_6.22.png) and [JLC Top PCBA, US$86.18](hardware/procurement/evidence/jlcone_top_pcba_quote_usd_86.18.png).
+Shipping and taxes are not included. The parts list, links and price evidence
+are in [external parts](hardware/procurement/NablaCalc_External_Parts.csv).
 
-The full LCSC BOM for one board is US$13.6065. It is useful as a raw component
-reference, but it is not added to the table because the Top PCBA already has
-those Top-side parts. The display, battery, camera and cables are not JLC parts,
-so they are in the external-parts list.
-
-I will decide the keyboard contact material, microSD card and case printing
-after I have the real modules in hand.
-
-If I decide to solder everything myself instead, the same build is US$45.1165:
-US$7.00 for five bare PCBs, US$13.6065 for the full LCSC BOM, and US$24.51 for
-the external modules. This is only another option, not something added to the
-Top-PCBA price.
+I will decide the keyboard contact material, microSD and case printing after I
+have the real modules in hand. If I decide to solder everything myself instead,
+the other option is about US$45.12.
 
 ## Repository map
 
@@ -111,7 +103,7 @@ Start with:
 
 The intended external sensor is the **RAW OV5640 5 MP autofocus, 24-pin DVP version with the `68D lens` option and approximately 78 mm FPC**:
 
-- [AliExpress item 1005006858943975](https://www.aliexpress.com/item/1005006858943975.html)
+- [Camera listing on AliExpress](https://www.aliexpress.com/item/1005006858943975.html)
 
 The project does **not** use a MIPI-only variant, an ESP32-CAM replacement module or the older Arducam B0158 breakout. The seller pinout and contact orientation must be checked against `FPC1` once more before purchase.
 
