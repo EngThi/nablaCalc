@@ -2,28 +2,29 @@
 # ∇Calc - Git Ignore Configuration
 # ==========================================
 
-# 1. Pastas Locais e Rascunhos Pessoais
+# Pastas Locais, Laboratório e Rascunhos Pessoais
 local/
 tmp/
 *.tmp
 *.bak
+.clangd
+compile_commands.json
 
-# 2. Ambientes de Desenvolvimento e Builds (PlatformIO / ESP-IDF / VS Code)
+# Builds e Caches de Compilação (ESP-IDF / CMake / PlatformIO / VS Code)
+build/
+**/build/
+.cache/
+**/.cache/
 .pio/
 .vscode/
+sdkconfig.old
+firmware/nabla_firmware/sdkconfig
 *.bin
 *.elf
 *.hex
 *.map
 
-# 3. Downloads duplicados e backups do navegador / CAD
-* (1).*
-* (2).*
-* (3).*
-* (4).*
-*.step.bak
-
-# 4. Logs e Arquivos de Sistema Operacional
+# Logs e Arquivos de Sistema Operacional
 *.log
 .DS_Store
 Thumbs.db
