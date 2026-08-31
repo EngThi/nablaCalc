@@ -90,8 +90,9 @@ docs/                   submission and reviewer documentation
 
 Start with:
 
-- [Standardized PCB BOM with LCSC links](BOM.csv)
-- [External parts and price-status list](hardware/procurement/NablaCalc_External_Parts.csv)
+- [Complete purchase BOM](BOM.csv)
+- [JLC/LCSC-only PCB component BOM](hardware/procurement/NablaCalc_JLC_LCSC_Only_BOM.csv)
+- [External parts list](hardware/procurement/NablaCalc_External_Parts.csv)
 - [Editable EasyEDA PCB source](hardware/pcb/source/NablaCalc_PCB.epro2)
 - [Editable EasyEDA schematic source](hardware/pcb/source/NablaCalc_Schematic.epro2)
 - [Current 2.2-inch-display mechanical assembly](mechanical/onshape_exports/NablaCalc_Assembly_2.2in_Display.step)
@@ -120,11 +121,11 @@ idf.py -p /dev/ttyACM0 flash monitor
 
 A clean build should be generated again after installing the ESP-IDF Python environment and before flashing the first PCBA.
 
-## Honest limitations
+## Some things still to do
 
-- No physical prototype has been built yet; this repository is the virtual design submitted for hardware funding.
-- The final display module and its exact mechanical stack must be frozen before purchase. The newest case export targets the 2.2-inch option; older 2.4-inch references remain in the engineering history.
-- OCR and AI-assisted solving are product goals, not validated.
+- I still need to build and test the real prototype. For now this is the full virtual design for funding.
+- The 2.2-inch display is the one I am getting. I will adjust the case better when I have the real parts here. Some old 2.4-inch files are still in the repo history.
+- OCR and AI solving are ideas for later, after the calculator itself is working.
 
 ## Credits
 
