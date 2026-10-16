@@ -2,7 +2,6 @@
 # ∇Calc - Git Ignore Configuration
 # ==========================================
 
-# Pastas Locais, Laboratório e Rascunhos Pessoais
 local/
 tmp/
 *.tmp
@@ -10,7 +9,7 @@ tmp/
 .clangd
 compile_commands.json
 
-# Builds e Caches de Compilação (ESP-IDF / CMake / PlatformIO / VS Code)
+# Builds e Caches de Compilação
 build/
 **/build/
 .cache/
@@ -29,3 +28,4 @@ firmware/nabla_firmware/sdkconfig
 .DS_Store
 Thumbs.db
 desktop.ini
+.esp_build_nabla/

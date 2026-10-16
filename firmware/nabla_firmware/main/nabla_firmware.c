@@ -36,11 +36,16 @@ static esp_err_t init_i2c_bus(void) {
 static void keypad_task(void *arg) {
   ESP_LOGI(TAG, "Task de Varredura do Teclado 7x7 iniciada com sucesso.");
 
+  key_event_t evt;
   while (1) {
-    key_code_t key = keypad_scan_once();
-    if (key != KEY_NONE) {
-      ESP_LOGI(TAG, "[TECLA ACIONADA] Código: %2d | Identificador: %s", key,
-               keypad_get_name(key));
+    if (keypad_poll_event(&evt)) {
+      if (evt.type == KEY_EVENT_PRESS) {
+        ESP_LOGI(TAG, "[TECLA PRESSIONADA] Código: %2d | Identificador: %s",
+                 evt.key, keypad_get_name(evt.key));
+      } else if (evt.type == KEY_EVENT_RELEASE) {
+        ESP_LOGI(TAG, "[TECLA LIBERADA]   Código: %2d | Identificador: %s",
+                 evt.key, keypad_get_name(evt.key));
+      }
     }
 
     vTaskDelay(pdMS_TO_TICKS(20));
