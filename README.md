@@ -30,7 +30,7 @@ This is a complete hardware design ready for prototype fabrication:
 
 ## Build costs and grants
 
-### Phase 1: Motherboard & Core Modules (Approved Grant: $116.00)
+### Phase 1: Motherboard & Core Modules~
 
 I went with the JLC Top PCBA for the mainboard because I do not have experience soldering the small parts myself. The minimum order gave five boards and two Top assemblies. I will do the Bottom side later.
 
